@@ -5,13 +5,8 @@ from datetime import datetime
 
 app = Flask(__name__)
 CORS(app)
-
-# ---------------- MYSQL CONFIG ----------------
-# REAL PASSWORD: Pri#yal%1*8nam_04$
-# ENCODED PASSWORD: Pri%23yal%251%2A8nam_04%24
-
 app.config["SQLALCHEMY_DATABASE_URI"] = (
-    "mysql+pymysql://root:Pri%23yal%251%2A8nam_04%24@localhost/comment_db"
+    "mysql+pymysql://root:Password@localhost/comment_db"
 )
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
@@ -76,3 +71,4 @@ def get_comments(task_id):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
